@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 210 25% 96%; /* Light Gray #F0F4F8 */
+    --foreground: 0 0% 3.9%;   /* Default: near black for text */
+
+    --card: 0 0% 100%;          /* Default: white */
+    --card-foreground: 0 0% 3.9%; /* Default: near black */
+
+    --popover: 0 0% 100%;       /* Default: white */
+    --popover-foreground: 0 0% 3.9%; /* Default: near black */
+
+    --primary: 216 92% 76%;     /* Soft Blue #89B4FA */
+    --primary-foreground: 0 0% 3.9%; /* Black text on soft blue for accessibility */
+
+    --secondary: 210 20% 90%;   /* A bit darker gray than background */
+    --secondary-foreground: 0 0% 3.9%; /* Black text */
+
+    --muted: 210 20% 90%;       /* Same as secondary, for less prominent elements */
+    --muted-foreground: 0 0% 45.1%; /* Default: lighter gray text */
+
+    --accent: 181 63% 47%;      /* Teal #2BC1C4 */
+    --accent-foreground: 0 0% 3.9%; /* Black text on teal for accessibility */
+
+    --destructive: 0 84.2% 60.2%; /* Default red */
+    --destructive-foreground: 0 0% 98%; /* Default light text */
+
+    --border: 0 0% 89.8%;       /* Default border */
+    --input: 0 0% 100%;       /* Default input background (white) */
+    --ring: 216 92% 76%;         /* Soft blue for focus rings */
+    
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 8%;    /* Deeper black */
+    --foreground: 0 0% 98%;    /* Near white */
+
+    --card: 0 0% 13%;           /* Slightly lighter than background for subtle distinction */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 13%;        /* Consistent with card background */
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 216 90% 70%; /* More vibrant Soft Blue for dark mode */
+    --primary-foreground: 0 0% 3.9%; /* Black text on this blue */
+
+    --secondary: 0 0% 16%;   /* Slightly lighter to differentiate from darker background */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 16%;        /* Same as secondary */
+    --muted-foreground: 0 0% 65%; /* Lighter muted text */
+
+    --accent: 180 65% 45%; /* Brighter, more vibrant Teal for dark mode */
+    --accent-foreground: 0 0% 3.9%; /* Black text on this teal */
+    
+    --destructive: 0 70% 55%; /* Brighter Red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 18%;       /* Slightly lighter border */
+    --input: 0 0% 13%;        /* Matches card background */
+    --ring: 216 90% 70%; /* Adjusted ring for new dark primary */
+    
+    --sidebar-background: 0 0% 9%; 
+    --sidebar-foreground: 0 0% 95.9%;
+    --sidebar-primary: 216 90% 70%; 
+    --sidebar-primary-foreground: 0 0% 3.9%; 
+    --sidebar-accent: 0 0% 17%; 
+    --sidebar-accent-foreground: 0 0% 95.9%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 216 90% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
